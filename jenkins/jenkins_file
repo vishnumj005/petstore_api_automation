@@ -1,0 +1,10 @@
+pipeline {
+  agent any
+  stages {
+    stage('Run Tests') {
+      steps {
+        bat "behave --tags=api_find_pets,api_delete_pets,api_add_new_pets"
+      }
+    }
+  }
+}
